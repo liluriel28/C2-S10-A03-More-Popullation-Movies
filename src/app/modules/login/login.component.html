@@ -1,0 +1,21 @@
+<div class="tituloempresa">
+  <h1></h1>
+</div>
+<section class="d-flex aling-item-center justify-content-center">
+  <form [formGroup]="formLogin">
+    <div class="row mt-4 text-center">
+      <div class="col-12">
+        <img src="{{logo}}" alt="Logo" class="logo">
+      </div>
+      <div class="col-12">
+        <input type="text" pInputText formControlName="username" name = "username" autocomplete="off">  <!--cuando se utilice un ngModel se debe utilizar un username para quitar el error-->
+      </div>
+      <div class="col-12" mt-2>
+        <input type="password" pPassword [feedback]="false" formControlName="username" />
+      </div>
+      <div class="col-12" mt-2>
+        <button pButton type="button" label="Iniciar sesión" (click)="login()"></button>
+      </div>
+    </div>
+  </form>
+</section>
